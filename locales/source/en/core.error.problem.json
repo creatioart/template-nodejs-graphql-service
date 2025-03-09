@@ -1,0 +1,23 @@
+{
+  "access_denied": "Access denied.",
+  "asset_access_denied": "Asset access denied.",
+  "internal_server_error": "Internal Server Error.",
+  "fail_start_apollo": "Fail to Start Apollo Server.",
+  "fail_start_apollo_subscription": "Fail to Start Apollo Subscription.",
+  "fail_register_express_graphql_upload_middleware": "Fail to Register Express Graphql Upload Middleware.",
+  "authentication_required_problem": "Authentication is required, to perform this operation. Ensure that you provide a valid Auth identity token in your request.",
+  "authorization_required_problem": "Authorization is required, to perform this operation. Request that an owner assign you a higher-access role.",
+  "access_denied_problem": "Access denied.",
+  "bad_request": "Server cannot process the request.",
+  "not_found_problem": "{{resource}} not found.",
+  "validation_problem": "Validation errors.",
+  "internal_service_problem": "Something went wrong if the issue persists, please contact support.",
+
+  "graphql_parse_problem": "Operation string contains a syntax error.",
+  "graphql_validation_problem": "Operation is not valid against the server schema.",
+  "graphql_bad_user_input_problem": "Operation includes an invalid value for a field argument.",
+  "graphql_persisted_query_not_found_problem": "Query request not found.",
+  "graphql_persisted_query_not_supported_problem": "Query request not supported.",
+  "graphql_operation_resolution_failure_problem": "Server couldn't resolve which operation to run.",
+  "graphql_bad_request_problem": "Server cannot process the request."
+}

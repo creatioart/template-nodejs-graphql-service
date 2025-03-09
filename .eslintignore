@@ -1,0 +1,12 @@
+# Directories
+build/
+coverage/
+node_modules/
+docs/
+protos/
+scripts/
+
+# Files
+**/generated.types/graphql.ts
+**/generated.types/module.types.ts
+*.graphql

@@ -1,0 +1,22 @@
+{
+  "access_denied": "Acceso denegado.",
+  "asset_access_denied": "Acceso al recurso denegado.",
+  "internal_server_error": "Error interno del servidor.",
+  "fail_start_apollo": "Fallo al iniciar el servidor Apollo.",
+  "fail_start_apollo_subscription": "Fallo al iniciar la suscripción de Apollo.",
+  "fail_register_express_graphql_upload_middleware": "Fallo al registrar el middleware de carga de Express Graphql.",
+  "authentication_required_problem": "Se requiere autenticación para realizar esta operación. Asegúrese de proporcionar un token de identidad de autenticación válido en su solicitud.",
+  "authorization_required_problem": "Se requiere autorización para realizar esta operación. Solicite a un propietario que le asigne un rol de acceso superior.",
+  "access_denied_problem": "Acceso denegado.",
+  "bad_request": "El servidor no puede procesar la solicitud.",
+  "not_found_problem": "{{resource}} no encontrado.",
+  "validation_problem": "Errores de validación.",
+  "internal_service_problem": "Algo salió mal. Si el problema persiste, contacte con soporte.",
+  "graphql_parse_problem": "La cadena de la operación contiene un error de sintaxis.",
+  "graphql_validation_problem": "La operación no es válida contra el esquema del servidor.",
+  "graphql_bad_user_input_problem": "La operación incluye un valor no válido para un argumento de campo.",
+  "graphql_persisted_query_not_found_problem": "Solicitud de consulta persistente no encontrada.",
+  "graphql_persisted_query_not_supported_problem": "Solicitud de consulta persistente no admitida.",
+  "graphql_operation_resolution_failure_problem": "El servidor no pudo resolver qué operación ejecutar.",
+  "graphql_bad_request_problem": "El servidor no puede procesar la solicitud."
+}

@@ -1,0 +1,12 @@
+# Directories
+.configuration/
+.git/
+.husky/
+coverage/
+docs/
+node_modules/
+scripts/
+test/
+
+# Files
+.gitignore

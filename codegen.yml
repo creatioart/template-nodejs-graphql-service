@@ -1,0 +1,30 @@
+overwrite: true
+schema: './src/modules/**/schema/*.schema.graphql'
+generates:
+  ./src/modules/:
+    preset: graphql-modules
+    presetConfig:
+      baseTypesPath: ../generated.types/graphql.ts
+      filename: generated.types/module.types.ts
+      useGraphQLModules: true
+    config:
+      avoidOptionals: true
+      nonOptionalTypename: true
+      optionalResolveType: true
+      emitLegacyCommonJSImports: false
+      mappers:
+        # Core Module
+        ValidationError: '@creatioart-js/graphql-error#ValidationErrorModel'
+
+        # Template Module
+        Template: ../modules/template/model/template.model.js#TemplateModel
+      enumValues:
+        # Core Module
+        ConditionalType: '@creatioart-js/express-core#ConditionalType'
+        OperatorType: '@creatioart-js/express-core#OperatorType'
+        SortType: '@creatioart-js/express-core#SortType'
+        ErrorStatusType: '@creatioart-js/graphql-error#ErrorStatusType'
+        ErrorCodeType: '@creatioart-js/graphql-error#ErrorCodeType'
+    plugins:
+      - 'typescript'
+      - 'typescript-resolvers'

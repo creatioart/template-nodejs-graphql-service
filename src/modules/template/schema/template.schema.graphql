@@ -1,0 +1,74 @@
+# Query Entrypoint
+type Query {
+  templates(input: TemplateInput): TemplatePayload
+}
+
+
+# Mutation Entrypoint
+type Mutation {
+  templateCreate(input: TemplateCreateInput!): TemplateCreatePayload
+  templateUpdate(input: TemplateUpdateInput!): TemplateUpdatePayload
+  templateDelete(input: TemplateDeleteInput!): TemplateDeletePayload
+}
+
+
+# Subscription Entrypoint
+type Subscription {
+  templateSubscribed: TemplateSubscriptionResult
+}
+
+
+# Entities
+type Template {
+  id: ID!
+  name: String!
+  description: String!
+}
+
+# Inputs & Payloads
+input TemplateInput {
+  searchOption: SearchOption
+}
+
+type TemplatePayload {
+  count: Int!
+  templates: [Template!]
+}
+
+input TemplateCreateInput {
+  name: String!
+  description: String!
+}
+
+type TemplateCreatePayload {
+  template: Template
+}
+
+input TemplateUpdateInput {
+  id: ID!
+  name: String!
+  description: String!
+}
+
+type TemplateUpdatePayload {
+  template: Template
+}
+
+input TemplateDeleteInput {
+  id: ID!
+}
+
+type TemplateDeletePayload {
+  template: Template
+}
+
+type TemplateSubscriptionResult {
+  count: Int!
+  templates: [Template!]
+}
+
+# Enumerations
+
+# Problems
+
+# Scalars

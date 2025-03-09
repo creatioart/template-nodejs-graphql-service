@@ -1,0 +1,188 @@
+# Query Entrypoint
+type Query {
+  _: String
+}
+
+
+# Mutation Entrypoint
+type Mutation {
+  _: String
+}
+
+
+# Subscription Entrypoint
+type Subscription {
+  _: String
+}
+
+
+# Entities
+type ValidationError {
+  attribute: String!
+  message: String!
+}
+
+
+# Inputs & Payloads
+input SearchOption {
+  filters: [Filter!]
+  order: Order
+  page: Int
+  pageCount: Int
+}
+
+input Filter {
+  conditional: ConditionalType!
+  property: String!
+  operator: OperatorType!
+  value: Object!
+}
+
+input Order {
+  property: String!
+  sort: SortType!
+}
+
+# Enumerations
+enum ConditionalType {
+  AND
+  OR
+}
+
+enum OperatorType {
+  EQUAL
+  NOT_EQUAL
+  LESS_THAN
+  LESS_THAN_OR_EQUAL
+  GREATER_THAN
+  GREATER_THAN_OR_EQUAL
+  IN
+  NOT_IN
+  ARRAY_CONTAINS
+  ARRAY_CONTAINS_ANY
+}
+
+enum SortType {
+  ASCENDING
+  DESCENDING
+}
+
+enum ErrorStatusType {
+  BAD_REQUEST
+  UNAUTHORIZED
+  FORBIDDEN
+  NOT_FOUND
+  EXPECTATION_FAILED
+  UNPROCESSABLE_ENTITY
+  INTERNAL_SERVER_ERROR
+}
+
+enum ErrorCodeType {
+  BAD_REQUEST_BASE
+  BAD_REQUEST_UNIQUE_ENTITY_RULE
+  BAD_REQUEST_HARD_CODE_BUSINESS_RULE
+  BAD_REQUEST_LOST_RESOURCE
+  BAD_REQUEST_CLOUD_PROCESSING_ERROR
+  BAD_REQUEST_DEPENDENCY_DELETE_ERROR
+  BAD_REQUEST_PROCESSED_WITH_WARNING
+  UNAUTHORIZED_BASE
+  FORBIDDEN_BASE
+  FORBIDDEN_PLAN_ASSETS_ACCESS
+  NOT_FOUND_BASE
+  UNPROCESSABLE_ENTITY_BASE
+  INTERNAL_SERVER_ERROR_BASE
+  INTERNAL_SERVER_ERROR_API_SERVER
+  INTERNAL_SERVER_ERROR_CLOUD_PROCESS
+  INTERNAL_SERVER_ERROR_EXTERNAL_SERVER
+}
+
+# Problems
+interface BaseProblem {
+  status: ErrorStatusType!
+  message: String!
+}
+
+type BadRequestProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+  entityTypeName: String!
+}
+
+type AuthenticationRequiredProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type AccessDeniedProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+  entityTypeName: String
+}
+
+type NotNoundProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+  entityTypeName: String!
+}
+
+type ValidationProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+  entityTypeName: String!
+  validation: [ValidationError]
+}
+
+type InternalServiceProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlParseProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlValidationProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlBadUserInputProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlPersistedQueryNotFoundProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlPersistedQueryNotSupportedProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+type GraphqlOperationResolutionFailureProblem implements BaseProblem {
+  status: ErrorStatusType!
+  code: ErrorCodeType!
+  message: String!
+}
+
+
+# Scalars
+scalar Timestamp
+
+scalar Object
+
+scalar Date
