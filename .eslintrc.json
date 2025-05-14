@@ -94,6 +94,7 @@
     "keyword-spacing": ["error", {
       "before": true ,
       "after": true
-    }]
+    }],
+    "n/no-unsupported-features/node-builtins":"off"
   }
 }

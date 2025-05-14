@@ -63,6 +63,14 @@ httpApplication.registerApplicationRouters(app);
 // Use to upload files
 app.use('/', registerUploadExpressMiddleware());
 
+// Register middleware before expressMiddleware of apollo server.
+app.use((req, _res, next) => {
+  if (!req.body) {
+    req.body = {}; // Prevent Apollo from failing on undefined/null req.body
+  }
+  next();
+});
+
 /**
  * Create HTTP Server
  */
