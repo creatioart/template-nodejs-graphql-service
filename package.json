@@ -23,7 +23,7 @@
     "build:schema": "mkdir build && cp src/modules/**/schema/*.graphql build/",
     "build:format": "npm run mdformat",
     "build:codegen": "npm run codegen",
-    "build:lint": "npx eslint ./src/** --max-warnings=0 --config=.eslintrc.json",
+    "build:lint": "npx eslint src --max-warnings=0 --config=.eslintrc.json",
     "build:compile": "tsc",
     "build:locale": "npm run locale",
     "mdformat": "npx prettier --write *.md",
