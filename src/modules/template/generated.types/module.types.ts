@@ -41,26 +41,23 @@ export namespace TemplateModule {
   export type QueryResolvers = Pick<Types.QueryResolvers, DefinedFields['Query']>;
   export type MutationResolvers = Pick<Types.MutationResolvers, DefinedFields['Mutation']>;
   export type SubscriptionResolvers = Pick<Types.SubscriptionResolvers, DefinedFields['Subscription']>;
-  export type TemplateResolvers = Pick<Types.TemplateResolvers, DefinedFields['Template'] | '__isTypeOf'>;
-  export type TemplatePayloadResolvers = Pick<
-    Types.TemplatePayloadResolvers,
-    DefinedFields['TemplatePayload'] | '__isTypeOf'
-  >;
+  export type TemplateResolvers = Pick<Types.TemplateResolvers, DefinedFields['Template']>;
+  export type TemplatePayloadResolvers = Pick<Types.TemplatePayloadResolvers, DefinedFields['TemplatePayload']>;
   export type TemplateCreatePayloadResolvers = Pick<
     Types.TemplateCreatePayloadResolvers,
-    DefinedFields['TemplateCreatePayload'] | '__isTypeOf'
+    DefinedFields['TemplateCreatePayload']
   >;
   export type TemplateUpdatePayloadResolvers = Pick<
     Types.TemplateUpdatePayloadResolvers,
-    DefinedFields['TemplateUpdatePayload'] | '__isTypeOf'
+    DefinedFields['TemplateUpdatePayload']
   >;
   export type TemplateDeletePayloadResolvers = Pick<
     Types.TemplateDeletePayloadResolvers,
-    DefinedFields['TemplateDeletePayload'] | '__isTypeOf'
+    DefinedFields['TemplateDeletePayload']
   >;
   export type TemplateSubscriptionResultResolvers = Pick<
     Types.TemplateSubscriptionResultResolvers,
-    DefinedFields['TemplateSubscriptionResult'] | '__isTypeOf'
+    DefinedFields['TemplateSubscriptionResult']
   >;
 
   export interface Resolvers {

@@ -449,8 +449,8 @@ export type AccessDeniedProblemResolvers<
 
 export type AuthenticationRequiredProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['AuthenticationRequiredProblem'] = ResolversParentTypes['AuthenticationRequiredProblem'],
+  ParentType extends ResolversParentTypes['AuthenticationRequiredProblem'] =
+    ResolversParentTypes['AuthenticationRequiredProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -536,8 +536,8 @@ export type ErrorStatusTypeResolvers = EnumResolverSignature<
 
 export type GraphqlBadUserInputProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['GraphqlBadUserInputProblem'] = ResolversParentTypes['GraphqlBadUserInputProblem'],
+  ParentType extends ResolversParentTypes['GraphqlBadUserInputProblem'] =
+    ResolversParentTypes['GraphqlBadUserInputProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -547,8 +547,8 @@ export type GraphqlBadUserInputProblemResolvers<
 
 export type GraphqlOperationResolutionFailureProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['GraphqlOperationResolutionFailureProblem'] = ResolversParentTypes['GraphqlOperationResolutionFailureProblem'],
+  ParentType extends ResolversParentTypes['GraphqlOperationResolutionFailureProblem'] =
+    ResolversParentTypes['GraphqlOperationResolutionFailureProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -568,8 +568,8 @@ export type GraphqlParseProblemResolvers<
 
 export type GraphqlPersistedQueryNotFoundProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['GraphqlPersistedQueryNotFoundProblem'] = ResolversParentTypes['GraphqlPersistedQueryNotFoundProblem'],
+  ParentType extends ResolversParentTypes['GraphqlPersistedQueryNotFoundProblem'] =
+    ResolversParentTypes['GraphqlPersistedQueryNotFoundProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -579,8 +579,8 @@ export type GraphqlPersistedQueryNotFoundProblemResolvers<
 
 export type GraphqlPersistedQueryNotSupportedProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['GraphqlPersistedQueryNotSupportedProblem'] = ResolversParentTypes['GraphqlPersistedQueryNotSupportedProblem'],
+  ParentType extends ResolversParentTypes['GraphqlPersistedQueryNotSupportedProblem'] =
+    ResolversParentTypes['GraphqlPersistedQueryNotSupportedProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -590,8 +590,8 @@ export type GraphqlPersistedQueryNotSupportedProblemResolvers<
 
 export type GraphqlValidationProblemResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['GraphqlValidationProblem'] = ResolversParentTypes['GraphqlValidationProblem'],
+  ParentType extends ResolversParentTypes['GraphqlValidationProblem'] =
+    ResolversParentTypes['GraphqlValidationProblem'],
 > = {
   code: Resolver<ResolversTypes['ErrorCodeType'], ParentType, ContextType>;
   message: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -725,8 +725,8 @@ export type TemplatePayloadResolvers<
 
 export type TemplateSubscriptionResultResolvers<
   ContextType = any,
-  ParentType extends
-    ResolversParentTypes['TemplateSubscriptionResult'] = ResolversParentTypes['TemplateSubscriptionResult'],
+  ParentType extends ResolversParentTypes['TemplateSubscriptionResult'] =
+    ResolversParentTypes['TemplateSubscriptionResult'],
 > = {
   count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   templates: Resolver<Maybe<Array<ResolversTypes['Template']>>, ParentType, ContextType>;

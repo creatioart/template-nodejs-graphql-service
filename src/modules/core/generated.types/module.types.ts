@@ -120,10 +120,7 @@ export namespace CoreModule {
   export type QueryResolvers = Pick<Types.QueryResolvers, DefinedFields['Query']>;
   export type MutationResolvers = Pick<Types.MutationResolvers, DefinedFields['Mutation']>;
   export type SubscriptionResolvers = Pick<Types.SubscriptionResolvers, DefinedFields['Subscription']>;
-  export type ValidationErrorResolvers = Pick<
-    Types.ValidationErrorResolvers,
-    DefinedFields['ValidationError'] | '__isTypeOf'
-  >;
+  export type ValidationErrorResolvers = Pick<Types.ValidationErrorResolvers, DefinedFields['ValidationError']>;
   export type BadRequestProblemResolvers = Pick<
     Types.BadRequestProblemResolvers,
     DefinedFields['BadRequestProblem'] | '__isTypeOf'
