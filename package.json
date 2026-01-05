@@ -1,6 +1,6 @@
 {
   "name": "@creatioart/template-nodejs-graphql-service",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "CreatioART - Template Node.js GraphQL Service able to handle API's request",
   "keywords": [

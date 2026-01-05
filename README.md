@@ -1,15 +1,14 @@
-# CreatioART: Template Node.js Express Service
+# CreatioART: Template Node.js GraphQL
 
 [![Release Level](https://img.shields.io/badge/release%20level-stable-brightgreen.svg?style=flat)]()
-[![NPM Core Version](https://img.shields.io/npm/v/@creatioart-js/express-core.svg)](https://www.npmjs.com/package/@creatioart-js/express-core)
+[![NPM Core Version](https://img.shields.io/npm/v/@creatioart-js/graphql-core.svg)](https://www.npmjs.com/package/@creatioart-js/graphql-core)
 
-CreatioART - Template Node.js Express Service for Express framework it's a template for a Restful API.
+CreatioART - Template Node.js GraphQL it's a template for a GraphQL Backend Server.
 This template can be applied to any web component such as:
 
 - NodeJS Enviroments
 - Serverless Engine
 - Kubernate Engine
-- Node Express Server
 
 ## Getting Started
 
@@ -84,10 +83,6 @@ The code is organized as follows:
 1. Create the enviroment file `.configuration\local.env` from the `.configuration\example.env` file.
 1. Run develop: npm run dev
 
-## Documentation
-
-Swagger Reference: [Swagger](swagger/swagger.yaml)
-
 ## CreatioART templates
 
 Complementary templates available from CreatioART:
@@ -99,7 +94,7 @@ Made with ❤️ by the CreatioART team.
 ## Contribute
 
 If you are interested in fixing issues and contributing directly to the code,
-please contact to [CreatioART Team](mailto:contact@creatioart.com). Here is how you can contribute to CreatioART.template-nodejs-express-service:
+please contact to [CreatioART Team](mailto:contact@creatioart.com). Here is how you can contribute to CreatioART.template-nodejs-graphql-service:
 
 - Submit bugs and help us verify fixes
 - Submit pull requests for bug fixes and features and discuss existing proposals
